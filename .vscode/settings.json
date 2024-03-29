@@ -1,6 +1,7 @@
 {
-  "esbonio.sphinx.buildDir" : "${workspaceFolder}/docs/build",
-  "esbonio.sphinx.confDir"  : "${workspaceFolder}/docs/source",
-  "esbonio.sphinx.srcDir": "${workspaceFolder}/docs/source",
   "restructuredtext.preview.name": "sphinx",
+  "esbonio.sphinx.buildDir": "${workspaceFolder}/docs/build",
+  "esbonio.sphinx.confDir": "${workspaceFolder}/docs/source",
+  "esbonio.sphinx.srcDir": "${workspaceFolder}/docs/source",
+  "mypy.configFile": "pyproject.toml"
 }
