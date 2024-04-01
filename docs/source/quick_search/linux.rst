@@ -1,9 +1,12 @@
 Linux
 =====
 
-创建新用户
-----------
-
+解析命令输入选项
+----------------
+.. literalinclude:: codes/linux/getopt.sh
+    :caption: 示例代码
+    :language: sh
+    :linenos:
 
 升级openssl到1.1.1w
 -------------------
