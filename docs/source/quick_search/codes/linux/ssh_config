@@ -1,0 +1,24 @@
+# Host名字可以任意指定 用于ssh $Host
+Host jumpsever
+    # HostName为域名或者ip地址
+    HostName jumpserver.com
+    # 连接到的用户名
+    User user
+    # 连接使用的端口默认22
+    Port 10022
+    # 连接使用的公钥算法，有时候需要显示指定
+    HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
+    # 连接使用的秘钥文件
+    IdentityFile ~/.ssh/id_rsa
+
+
+# 跳板机内部机器示例
+Host jumpserver-172.17.0.1
+    # 填跳板机的Hostname
+    HostName jumpserver.com
+    # 跳板机用户@目标机器用户@目标机器在跳板机上地址
+    User jump_user@target_user@172.17.0.1
+    HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
+    IdentityFile ~/.ssh/id_rsa

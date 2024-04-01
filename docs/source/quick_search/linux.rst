@@ -8,6 +8,29 @@ Linux
     :language: sh
     :linenos:
 
+ssh
+---
+
+ssh客户端
+`````````
+
+根据指定算法alg生成标题为comment的秘钥:
+
+``ssh-keygen [-t alg] [-C comment]``
+
+.. literalinclude:: codes/linux/ssh_config
+    :caption: ~/.ssh/config文件示例
+    :language: text
+
+ssh服务端
+`````````
+
+添加客户端公钥支持秘钥访问:
+
+1. ``chmod 700 /home/${user}``
+2. 在 ``/home/${user}/.ssh/authorized_keys`` 下添加客户端公钥文件内容
+
+
 升级openssl到1.1.1w
 -------------------
 
@@ -19,3 +42,14 @@ Linux
     :caption: 升级openssl到1.1.1w并应用到python
     :language: sh
     :linenos:
+
+wsl安装glibc_2.28
+-----------------
+
+过程中出现命令不可用的情况，使用
+``LD_PRELOAD=/lib/x86_64-linux-gnu/libc-2.27.so COMMAND``
+调用COMMAND命令
+
+.. literalinclude:: codes/linux/wsl_install_glibc_2_28.sh
+    :language: sh
+    :lineno:

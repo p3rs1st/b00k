@@ -22,3 +22,9 @@ docker
     :language: sh
     :linenos:
 
+Golang基础Dockerfile
+--------------------
+
+.. literalinclude:: codes/docker/golang.dockerfile
+    :language: dockerfile
+    :linenos:
