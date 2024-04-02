@@ -52,4 +52,4 @@ wsl安装glibc_2.28
 
 .. literalinclude:: codes/linux/wsl_install_glibc_2_28.sh
     :language: sh
-    :lineno:
+    :linenos:

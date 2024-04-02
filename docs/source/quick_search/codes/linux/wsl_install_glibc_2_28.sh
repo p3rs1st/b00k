@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 sudo su
 cd ~
@@ -6,23 +7,20 @@ curl -O http://ftp.gnu.org/gnu/glibc/glibc-2.28.tar.gz
 tar zxf glibc-2.28.tar.gz
 cd glibc-2.28/
 mkdir build
-cd build/
+cd build
 ../configure --prefix=/usr/local/glibc-2.28
 make -j2
 make install
 
-# make install WSL下出现报错
+# make install start WSL下出现报错
 mkdir /usr/lib/wsl/lib2
 ln -s /usr/lib/wsl/lib/* /usr/lib/wsl/lib2
 ldconfig
 
-# 每次重启后不自动还原
-vi /etc/wsl.conf
-
-# 编辑内容
-# [automount]
-# ldconfig = false
-# 编辑内容结束
+echo "在/etc/wsl.conf中加入下述内容使得重启后不自动还原
+[automount]
+ldconfig = false
+"
 # make install end
 
 # 修改libc.so.6连接后无法直接使用任何命令, 需要在命令前面加上LD_PRELOAD的形式
