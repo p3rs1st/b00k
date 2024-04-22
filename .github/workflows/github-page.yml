@@ -39,8 +39,8 @@ jobs:
           python-version: '3.11' 
       - name: Build artifact
         run: |
-          pip3 install -r requirements.txt
           cd docs
+          pip3 install -r requirements.txt
           make html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
