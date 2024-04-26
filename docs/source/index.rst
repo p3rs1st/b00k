@@ -1,14 +1,15 @@
-A Coder Trapped by LOL
-######################
+Content Collection
+##################
 
-``玩LOL玩的``
+文档撰写规则:
+
+1. 目录结构顺序: ``英文字母序小`` -> ``英文字母序大`` -> ``中文拼音序小`` -> ``中文拼音序大``
 
 .. toctree::
    :maxdepth: 2
    :hidden:
 
    note
-   program/index
    life/index
 
 .. toctree::

@@ -1,38 +1,46 @@
 Linux
 =====
 
-解析命令输入选项
-----------------
-.. literalinclude:: codes/linux/getopt.sh
-    :caption: 示例代码
-    :language: sh
-    :linenos:
+工具配置
+--------
 
 ssh
----
+```
 
-ssh客户端
-`````````
+ssh生成密钥对
+:::::::::::::
 
 根据指定算法alg生成标题为comment的秘钥:
 
 ``ssh-keygen [-t alg] [-C comment]``
 
+ssh config
+::::::::::
+
 .. literalinclude:: codes/linux/ssh_config
     :caption: ~/.ssh/config文件示例
     :language: text
 
-ssh服务端
-`````````
-
-添加客户端公钥支持秘钥访问:
+ssh服务端添加客户端公钥
+:::::::::::::::::::::::
 
 1. ``chmod 700 /home/${user}``
-2. 在 ``/home/${user}/.ssh/authorized_keys`` 下添加客户端公钥文件内容
+2. ``/home/${user}/.ssh/authorized_keys`` 下新增一行客户端公钥文件内容
+
+脚本工具
+--------
+
+解析命令输入选项
+````````````````
+.. literalinclude:: codes/linux/getopt.sh
+    :caption: 示例代码
+    :language: sh
+    :linenos:
+
 
 
 升级openssl到1.1.1w
--------------------
+```````````````````
 
 **升级原因**: 使用python3时可能因为urllib3的版本过高导致与openssl1.0.x不兼容(如使用requests)，可以通过指定安装urll3b的版本为1.26或升级openssl到1.1.1
 
@@ -44,7 +52,7 @@ ssh服务端
     :linenos:
 
 wsl安装glibc_2.28
------------------
+`````````````````
 
 过程中出现命令不可用的情况，使用
 ``LD_PRELOAD=/lib/x86_64-linux-gnu/libc-2.27.so COMMAND``
