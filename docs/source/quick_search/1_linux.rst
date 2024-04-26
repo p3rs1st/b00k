@@ -4,15 +4,13 @@ Linux
 工具配置
 --------
 
+screen
+``````
+
+支持滚轮: ``echo 'termcapinfo xterm*|rxvt*|kterm*|Eterm* ti@:te@' >> ~/.screenrc``
+
 ssh
 ```
-
-ssh生成密钥对
-:::::::::::::
-
-根据指定算法alg生成标题为comment的秘钥:
-
-``ssh-keygen [-t alg] [-C comment]``
 
 ssh config
 ::::::::::
@@ -27,8 +25,26 @@ ssh服务端添加客户端公钥
 1. ``chmod 700 /home/${user}``
 2. ``/home/${user}/.ssh/authorized_keys`` 下新增一行客户端公钥文件内容
 
+ssh生成密钥对
+:::::::::::::
+
+根据指定算法alg生成标题为comment的秘钥:
+
+``ssh-keygen [-t alg] [-C comment]``
+
 脚本工具
 --------
+
+wsl安装glibc_2.28
+`````````````````
+
+过程中出现命令不可用的情况，使用
+``LD_PRELOAD=/lib/x86_64-linux-gnu/libc-2.27.so COMMAND``
+调用COMMAND命令
+
+.. literalinclude:: codes/linux/wsl_install_glibc_2_28.sh
+    :language: sh
+    :linenos:
 
 解析命令输入选项
 ````````````````
@@ -48,16 +64,5 @@ ssh服务端添加客户端公钥
 
 .. literalinclude:: codes/linux/upgrade_to_openssl_1_1_1w.sh
     :caption: 升级openssl到1.1.1w并应用到python
-    :language: sh
-    :linenos:
-
-wsl安装glibc_2.28
-`````````````````
-
-过程中出现命令不可用的情况，使用
-``LD_PRELOAD=/lib/x86_64-linux-gnu/libc-2.27.so COMMAND``
-调用COMMAND命令
-
-.. literalinclude:: codes/linux/wsl_install_glibc_2_28.sh
     :language: sh
     :linenos:

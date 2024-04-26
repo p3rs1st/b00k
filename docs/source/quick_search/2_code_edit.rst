@@ -18,7 +18,7 @@ React
 添加到React项目中:
 
 .. code-block:: sh
-    
+
     vi .eslintrc.json
 
     # 编辑开始
