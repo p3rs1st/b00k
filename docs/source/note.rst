@@ -23,6 +23,7 @@
 * docker内stderr如何同时输出到文件和控制台以及优劣问题
 * 软删除
 * pytest mock在from import情况下会失效 `相关博客 <https://blog.csdn.net/qq_19446965/article/details/109018594>`_
+* python json parse_constant处理NaN
 
 
 
