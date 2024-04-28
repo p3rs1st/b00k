@@ -260,7 +260,6 @@ Docker
 .. code:: json
 
    {
-     ...,
      "registry-mirrors": [
        "https://hub-mirror.c.163.com",
        "https://registry.docker-cn.com",
@@ -321,7 +320,7 @@ Miniconda
    默认路径为\ ``C:\Program Files\NIVIDIA GPU Computing Toolkit\CUDA``
 6. 环境变量中添加以下, 以下为默认路径参考
 
-.. code:: txt
+.. code:: text
 
    C:\Program Files\NIVIDIA GPU Computing Toolkit\CUDA\v11.2\bin
    C:\Program Files\NIVIDIA GPU Computing Toolkit\CUDA\v11.2\include
