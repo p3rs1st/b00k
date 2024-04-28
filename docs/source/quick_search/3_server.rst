@@ -16,6 +16,6 @@ Command
 +-----------------+--------------+
 
 
-.. literalinclude:: codes/server/nginx.conf
+.. literalinclude:: _codes/server/nginx.conf
     :caption: nginx常用配置
     :linenos:

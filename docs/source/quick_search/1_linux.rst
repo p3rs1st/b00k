@@ -15,7 +15,7 @@ ssh
 ssh config
 ::::::::::
 
-.. literalinclude:: codes/linux/ssh_config
+.. literalinclude:: _codes/linux/ssh_config
     :caption: ~/.ssh/config文件示例
     :language: text
 
@@ -42,13 +42,13 @@ wsl安装glibc_2.28
 ``LD_PRELOAD=/lib/x86_64-linux-gnu/libc-2.27.so COMMAND``
 调用COMMAND命令
 
-.. literalinclude:: codes/linux/wsl_install_glibc_2_28.sh
+.. literalinclude:: _codes/linux/wsl_install_glibc_2_28.sh
     :language: sh
     :linenos:
 
 解析命令输入选项
 ````````````````
-.. literalinclude:: codes/linux/getopt.sh
+.. literalinclude:: _codes/linux/getopt.sh
     :caption: 示例代码
     :language: sh
     :linenos:
@@ -62,7 +62,7 @@ wsl安装glibc_2.28
 
 **OpenSSL3与OpenSSL1**: OpenSSL1是单线程架构、支持TLS1.2及以下，OpenSSL3是多线程架构、支持TLS1.3，、安全性更高、代码不兼容OpenSSL1
 
-.. literalinclude:: codes/linux/upgrade_to_openssl_1_1_1w.sh
+.. literalinclude:: _codes/linux/upgrade_to_openssl_1_1_1w.sh
     :caption: 升级openssl到1.1.1w并应用到python
     :language: sh
     :linenos:

@@ -47,7 +47,7 @@ Dockerfile
 Golang基础Dockerfile
 ````````````````````
 
-.. literalinclude:: codes/docker/golang.dockerfile
+.. literalinclude:: _codes/docker/golang.dockerfile
     :language: dockerfile
     :linenos:
 
@@ -57,20 +57,20 @@ Golang基础Dockerfile
 MongoDB
 ```````
 
-.. literalinclude:: codes/docker/mongo.sh
+.. literalinclude:: _codes/docker/mongo.sh
     :language: sh
     :linenos:
 
 Mysql
 `````
 
-.. literalinclude:: codes/docker/mysql.sh
+.. literalinclude:: _codes/docker/mysql.sh
     :language: sh
     :linenos:
 
 Redis
 `````
 
-.. literalinclude:: codes/docker/redis.sh
+.. literalinclude:: _codes/docker/redis.sh
     :language: sh
     :linenos:
