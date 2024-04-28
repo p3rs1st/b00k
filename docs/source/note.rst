@@ -11,7 +11,6 @@
 * python gunicorn日志配置
 * python format: black flake8
 * mysqldump导入导出指令
-* pre commit
 * python 装饰器
 * 网络请求设计在输入多余信息时给出提示，在使用默认时给出提示，更多用失败地方式告诉使用者失败而不是准备默认值
 * docker开启远程操作

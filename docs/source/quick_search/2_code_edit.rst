@@ -1,6 +1,26 @@
 代码编辑
 ========
 
+Pre Commit
+----------
+
+git commit前进行的校验等工作
+
+安装
+````
+
+.. code:: sh
+
+    pip install pre-commit
+    pre-commit install
+
+配置文件.pre-commit-config.yaml
+```````````````````````````````
+
+.. literalinclude:: _codes/code_edit/.pre-commit-config.python.yaml
+    :caption: python开发配置
+    :linenos:
+
 代码风格化
 ----------
 
