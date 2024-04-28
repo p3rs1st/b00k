@@ -4,8 +4,6 @@
 待补充内容
 ----------
 
-* 将 `原笔记 <https://p3rs1st.github.io/camille>`_ 迁移过来
-
 * maxwell的作用以及使用方式
 * kafka基本使用与意义
 * sqlalchemy2使用
