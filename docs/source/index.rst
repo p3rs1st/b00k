@@ -12,7 +12,7 @@ Content Collection
 
    note
    life
-   win11-install
+   system-install
 
 .. toctree::
    :glob:
