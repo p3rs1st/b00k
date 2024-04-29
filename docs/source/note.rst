@@ -16,10 +16,8 @@
 * docker开启远程操作
 * 在mac上开启docker远程连接
 * zk集群、kafka集群、mysql主从
-* 常用功能函数集合
 * docker内stderr如何同时输出到文件和控制台以及优劣问题
 * 软删除
-* pytest mock在from import情况下会失效 `相关博客 <https://blog.csdn.net/qq_19446965/article/details/109018594>`_
 
 
 

@@ -1,7 +1,16 @@
 Python
 ======
 
-.. literalinclude:: _codes/python/jsons.py
+文件与json的转换
+----------------
+
+.. literalinclude:: _codes/python/json_template.py
     :language: python
     :linenos:
-    :caption: 文件与json的转换
+
+pytest一般用法
+--------------
+
+.. literalinclude:: _codes/python/pytest_template.py
+    :language: python
+    :linenos:
