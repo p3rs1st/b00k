@@ -18,6 +18,7 @@
 * zk集群、kafka集群、mysql主从
 * docker内stderr如何同时输出到文件和控制台以及优劣问题
 * 软删除
+* rsync inotify openssl加密
 
 
 

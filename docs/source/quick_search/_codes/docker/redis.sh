@@ -7,7 +7,7 @@ redis_container_name=redis # redis容器名称
 redis_port=6379            # redis映射到宿主机的端口
 # 可修改参数结束
 
-ARGS=$(getopt -o "" -l "redis_image:,redis_container_name::,redis_port::" -- "$@")
+ARGS=$(getopt -o "" -l "redis_image:,redis_container_name:,redis_port:" -- "$@")
 
 eval set -- "${ARGS}"
 

@@ -8,7 +8,7 @@ mysql_password=       # mysql密码
 mysql_port=3306       # mysql映射到宿主机的端口
 # 可修改参数结束
 
-ARGS=$(getopt -o "" -l "mysql_image:,mysql_container_name::,mysql_password::,mysql_port::" -- "$@")
+ARGS=$(getopt -o "" -l "mysql_image:,mysql_container_name:,mysql_password:,mysql_port:" -- "$@")
 
 eval set -- "${ARGS}"
 

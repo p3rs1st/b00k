@@ -7,7 +7,7 @@ mongo_container_name=mongo # mongo容器名称
 mongo_port=27017           # mongo映射到宿主机的端口
 # 可修改参数结束
 
-ARGS=$(getopt -o "" -l "mongo_image:,mongo_container_name::,mongo_port::" -- "$@")
+ARGS=$(getopt -o "" -l "mongo_image:,mongo_container_name:,mongo_port:" -- "$@")
 
 eval set -- "${ARGS}"
 
