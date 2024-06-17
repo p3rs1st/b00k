@@ -19,6 +19,7 @@
 * docker内stderr如何同时输出到文件和控制台以及优劣问题
 * 软删除
 * rsync inotify openssl加密
+* 源码安装python时路径不能带有冒号，否则会被识别为分隔的sys.path导致错误
 
 
 
