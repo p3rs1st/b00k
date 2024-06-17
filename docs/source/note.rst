@@ -20,6 +20,7 @@
 * 软删除
 * rsync inotify openssl加密
 * 源码安装python时路径不能带有冒号，否则会被识别为分隔的sys.path导致错误
+* https://www.cnblogs.com/frantichow/p/17254665.html
 
 
 
