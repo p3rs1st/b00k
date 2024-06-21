@@ -21,6 +21,9 @@
 * rsync inotify openssl加密
 * 源码安装python时路径不能带有冒号，否则会被识别为分隔的sys.path导致错误
 * https://www.cnblogs.com/frantichow/p/17254665.html
+* https://blog.csdn.net/lwcaiCSDN/article/details/87862025
+* 构建ssh server的容器
+* sso单点登录的跨域问题
 
 
 
