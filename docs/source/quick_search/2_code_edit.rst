@@ -4,22 +4,18 @@
 Pre Commit
 ----------
 
-git commit前进行的校验等工作
+git commit前进行的校验等工作，配置在本地
 
-安装
-````
+.. literalinclude:: _codes/code_edit/.pre-commit-config.python.yaml
+    :caption: .pre-commit-config.yaml
+    :language: yaml
+    :linenos:
 
 .. code:: sh
 
+    # 保存配置文件后初始化pre-commit脚本
     pip install pre-commit
     pre-commit install
-
-配置文件.pre-commit-config.yaml
-```````````````````````````````
-
-.. literalinclude:: _codes/code_edit/.pre-commit-config.python.yaml
-    :caption: python开发配置
-    :linenos:
 
 代码风格化
 ----------
@@ -27,15 +23,25 @@ git commit前进行的校验等工作
 Python
 ``````
 
-black
-:::::
+.. literalinclude:: _codes/code_edit/python.pyproject.toml
+    :caption: pyproject.toml
+    :language: toml
+    :linenos:
 
-基于PEP8编码规范的python代码风格化工具，具有少量的配置项
+`black <https://black.readthedocs.io/en/stable/the_black_code_style/index.html>`__
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-flake8
-::::::
+基于PEP8编码规范的python代码风格化工具
 
-静态代码风格检查器
+`flake8 <https://flake8.pycqa.org/en/latest/>`__
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+静态代码风格检查器，`flake8 code规则对应表 <https://www.flake8rules.com/>`__
+
+`isort <https://pycqa.github.io/isort/>`__
+::::::::::::::::::::::::::::::::::::::::::
+
+格式化导入包
 
 React
 `````

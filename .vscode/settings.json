@@ -3,5 +3,9 @@
   "esbonio.sphinx.buildDir": "${workspaceFolder}/docs/build",
   "esbonio.sphinx.confDir": "${workspaceFolder}/docs/source",
   "esbonio.sphinx.srcDir": "${workspaceFolder}/docs/source",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+  },
   "mypy.configFile": "pyproject.toml"
 }
