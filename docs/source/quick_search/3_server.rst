@@ -1,6 +1,13 @@
 服务
 ====
 
+Maxwell
+-------
+
+CDC(change data capture)应用，通过成为mysql的从节点读取mysql的binlog，将发生变化的数据以JSON格式写入流平台如Kafka、Redis消息队列等
+
+使用简单，参考 `官方文档 <https://maxwells-daemon.io/>`__
+
 Nginx
 -----
 

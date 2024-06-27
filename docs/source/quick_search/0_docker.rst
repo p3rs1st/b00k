@@ -74,3 +74,20 @@ Redis
 .. literalinclude:: _codes/docker/redis.sh
     :language: sh
     :linenos:
+
+远程访问
+--------
+
+linux
+`````
+
+.. code-block:: sh
+
+    vi /usr/lib/systemd/system/docker.service
+
+    # 编辑开始
+
+    [Service]
+    ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375 --containerd=/run/containerd/containerd.sock
+
+    # 编辑结束

@@ -1,6 +1,13 @@
 Python
 ======
 
+pytest一般用法
+--------------
+
+.. literalinclude:: _codes/python/pytest_template.py
+    :language: python
+    :linenos:
+
 文件与json的转换
 ----------------
 
@@ -8,9 +15,9 @@ Python
     :language: python
     :linenos:
 
-pytest一般用法
---------------
+装饰器
+------
 
-.. literalinclude:: _codes/python/pytest_template.py
+.. literalinclude:: _codes/python/decorator.py
     :language: python
     :linenos:
