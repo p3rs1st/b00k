@@ -56,7 +56,7 @@ React
 
 添加到React项目中:
 
-.. code-block:: sh
+.. code-block:: bash
 
     vi .eslintrc.json
 

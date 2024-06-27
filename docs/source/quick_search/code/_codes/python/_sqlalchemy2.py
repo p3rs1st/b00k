@@ -9,6 +9,7 @@ import sqlalchemy.orm as sa_orm
 from sqlalchemy.orm.session import ORMExecuteState
 
 user, password, host, port, database = "root", "password", "localhost", 3306, "database"
+"""存在转义字符需要用urllib.parse.quote转义"""
 engine = sa.create_engine(f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}")
 """建立连接，不同的引擎需要安装不同的DB引擎，pymysql: pip install pymysql"""
 

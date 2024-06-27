@@ -41,6 +41,27 @@ Command
 | docker save [-o FILE] IMAGE [IMAGE...]             | 将镜像保存为tar文件  |
 +----------------------------------------------------+----------------------+
 
+Compose
+-------
+
+MySQL
+`````
+
+.. literalinclude:: _codes/docker_compose/mysql.yml
+    :caption: mysql.yml
+    :language: yaml
+    :linenos:
+
+.. literalinclude:: _codes/docker_compose/mysql/master.cnf
+    :caption: mysql/master.cnf
+    :language: ini
+    :linenos:
+
+.. literalinclude:: _codes/docker_compose/mysql/slave.cnf
+    :caption: mysql/slave.cnf
+    :language: ini
+    :linenos:
+
 Dockerfile
 ----------
 
@@ -58,21 +79,21 @@ MongoDB
 ```````
 
 .. literalinclude:: _codes/docker/mongo.sh
-    :language: sh
+    :language: bash
     :linenos:
 
-Mysql
+MySQL
 `````
 
 .. literalinclude:: _codes/docker/mysql.sh
-    :language: sh
+    :language: bash
     :linenos:
 
 Redis
 `````
 
 .. literalinclude:: _codes/docker/redis.sh
-    :language: sh
+    :language: bash
     :linenos:
 
 远程访问
@@ -81,7 +102,7 @@ Redis
 linux
 `````
 
-.. code-block:: sh
+.. code-block:: bash
 
     vi /usr/lib/systemd/system/docker.service
 

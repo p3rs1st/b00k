@@ -43,14 +43,14 @@ wsl安装glibc_2.28
 调用COMMAND命令
 
 .. literalinclude:: _codes/linux/wsl_install_glibc_2_28.sh
-    :language: sh
+    :language: bash
     :linenos:
 
 解析命令输入选项
 ````````````````
 .. literalinclude:: _codes/linux/getopt.sh
     :caption: 示例代码
-    :language: sh
+    :language: bash
     :linenos:
 
 
@@ -64,5 +64,5 @@ wsl安装glibc_2.28
 
 .. literalinclude:: _codes/linux/upgrade_to_openssl_1_1_1w.sh
     :caption: 升级openssl到1.1.1w并应用到python
-    :language: sh
+    :language: bash
     :linenos:

@@ -1,0 +1,20 @@
+name: mysql
+services:
+  m1:
+    image: mysql
+    ports:
+      - 33060:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: passwd1
+    volumes:
+      - mysql/master.cnf:/etc/my.cnf
+      - /etc/localtime:/etc/localtime
+  m2:
+    image: mysql
+    ports:
+      - 33061:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: passwd1
+    volumes:
+      - mysql/slave.cnf:/etc/my.cnf
+      - /etc/localtime:/etc/localtime

@@ -8,6 +8,8 @@ CDC(change data capture)应用，通过成为mysql的从节点读取mysql的binl
 
 使用简单，参考 `官方文档 <https://maxwells-daemon.io/>`__
 
+使用案例：进程监听数据表状态列的改变并进行业务处理，使用maxwell监测状态列的改变后通过消息队列转交给监听进程，监听进程不需要定期拉取数据库
+
 Nginx
 -----
 
