@@ -1,0 +1,20 @@
+name: zookeeper
+services:
+  zk1:
+    image: zookeeper
+    volumes:
+      - zookeeper/zoo.cfg:/conf/zoo.cfg
+      - zookeeper/master_myid:/data/myid
+      - /etc/localtime:/etc/localtime
+  zk2:
+    image: zookeeper
+    volumes:
+      - zookeeper/zoo.cfg:/conf/zoo.cfg
+      - zookeeper/slave1_myid:/data/myid
+      - /etc/localtime:/etc/localtime
+  zk3:
+    image: zookeeper
+    volumes:
+      - zookeeper/zoo.cfg:/conf/zoo.cfg
+      - zookeeper/slave2_myid:/data/myid
+      - /etc/localtime:/etc/localtime

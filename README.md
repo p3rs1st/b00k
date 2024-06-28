@@ -2,7 +2,7 @@
 
 ## 本地编译
 
-`cd docs && make html`
+`cd docs && rm -rf build && make html`
 
 ## Visual Studio Code插件
 
