@@ -20,6 +20,13 @@ mysqldump
 sql
 ---
 
+json处理
+````````
+
+.. literalinclude:: _codes/mysql/json.sql
+    :caption: json用法
+    :language: sql
+
 mysql8的密码插件问题
 ````````````````````
 

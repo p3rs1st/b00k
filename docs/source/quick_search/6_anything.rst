@@ -10,12 +10,34 @@ linux环境变量控制文件
 - profile是交互式，登录进入时生效
 
     - ``/etc/profile``: 系统环境参数，所有用户有效
-    - ``~/.bash_profile```: 针对用户的环境参数
+    - ``~/.bash_profile``: 针对用户的环境参数
 
 - bashrc是交互式，非登录进入时也会生效，如 ``docker exec``
 
-  - ``/etc/bashrc```: 系统bash环境设置，所有用户有效
-  - ``~/.bashrc```: 针对用户的bash环境设置
+  - ``/etc/bashrc``: 系统bash环境设置，所有用户有效
+  - ``~/.bashrc``: 针对用户的bash环境设置
+
+nodejs在cicd中的镜像问题
+````````````````````````
+
+在cicd中使用node:18镜像进行npm操作可能会有以下报错，将镜像换成node:18-bullseye版本即可
+
+.. code-block:: text
+  :caption: 报错信息
+
+  node[6]: ../src/node_platform.cc:68:std::unique_ptr<long unsigned int> node::WorkerThreadsTaskRunner::DelayedTaskScheduler::Start(): Assertion `(0) == (uv_thread_create(t.get(), start_thread, this))' failed.
+    1: 0xb9c310 node::Abort() [node]
+    2: 0xb9c38e  [node]
+    3: 0xc0a49e  [node]
+    4: 0xc0a581 node::NodePlatform::NodePlatform(int, v8::TracingController*, v8::PageAllocator*) [node]
+    5: 0xb58233 node::InitializeOncePerProcess(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, node::ProcessFlags::Flags) [node]
+    6: 0xb5888b node::Start(int, char**) [node]
+    7: 0x7faa3c24b24a  [/lib/x86_64-linux-gnu/libc.so.6]
+    8: 0x7faa3c24b305 __libc_start_main [/lib/x86_64-linux-gnu/libc.so.6]
+    9: 0xad789e _start [node]
+  Aborted (core dumped)
+
+
 
 sso的跨域问题
 `````````````
