@@ -1,10 +1,13 @@
 package main
 
 import (
+	"archive/tar"
+	"bytes"
 	"context"
 	"fmt"
 	"io"
 	"os"
+	"path"
 
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/api/types/image"
@@ -44,6 +47,39 @@ func DockerRun(imageID string) (string, error) {
 		return "", err
 	}
 	return createResp.ID, nil
+}
+
+func DockerCopy(containerID, containerPath, hostPath string) error {
+	ctx := context.Background()
+	client, err := Client()
+	if err != nil {
+		return err
+	}
+	// 拷贝单个文件
+	// 拷贝进去必须为tar压缩包
+	file, err := os.OpenFile(hostPath, os.O_RDONLY, 0755)
+	if err != nil {
+		return err
+	}
+	// 拷贝的目标地址需要为指定为目录路径，拷贝后会自动解压到目录路径下
+	if err = client.CopyToContainer(ctx, containerID, path.Dir(containerPath), file, container.CopyToContainerOptions{}); err != nil {
+		return fmt.Errorf("copy file to container error: %w", err)
+	}
+	// 拷贝出来是tar压缩包，需要自行解压
+	reader, _, err := client.CopyFromContainer(context.Background(), containerID, srcPath)
+	if err != nil {
+		return err
+	}
+	// 下面适用于拷贝单文件时的场景
+	tarReader := tar.NewReader(reader)
+	if _, err = tarReader.Next(); err != nil {
+		return err
+	}
+	buf := bytes.NewBufferString("")
+	if _, err = io.Copy(buf, tarReader); err != nil {
+		return err
+	}
+	fmt.Println(buf.String())
 }
 
 func DockerWait(containerID string) error {
