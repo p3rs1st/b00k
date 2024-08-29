@@ -10,6 +10,16 @@ ceph解压卡死
 将ceph共享存储目录下的一个压缩文件解压到另一个目录时，会卡死，原因可能是文件解压后但是metadata信息还没有同步，
 读取解压目录未能读取到压缩文件，从而反复解压，最终卡死。
 
+git rebase
+``````````
+
+`git rebase -i HEAD~<n>`
+
+编辑处理当前分支的最后n个commit
+
+- squash: 合并commit，将除了第一个commit的pick，其他均改为squash，保存后处理第二个编辑文件，文件修改commit信息
+- 修改commit内容: 将待修改的commit前面的pick改为reword，保存后编辑文件，修改commit信息
+
 http post multipart/form-data
 `````````````````````````````
 
