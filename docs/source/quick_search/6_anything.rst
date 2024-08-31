@@ -61,6 +61,11 @@ nodejs在cicd中的镜像问题
   Aborted (core dumped)
 
 
+python3.12 pkg_resources
+````````````````````````
+
+用python3.12使用某些第三方库的时候会报错 ``No module named 'pkg_resources'.`` 解决方案为 ``pip insatll setuptools``
+
 
 sso的跨域问题
 `````````````
