@@ -43,7 +43,7 @@ def test_0(fixture0):
 
 # pip install pytest-order
 # index越小越先执行
-@pytest.mark.order(index=1)
+@pytest.mark.order(index=1)  # mypy: ignore
 class TestXXX:
     def test_1(mocker, fixture1):
         mocker.patch("G.G1", return_value=0)
