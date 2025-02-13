@@ -9,3 +9,5 @@
 ## Visual Studio Code插件
 
 `lextudio.restructuredtext`、`swyddfa.esbonio`
+
+使用插件需要给python环境安装`pip install esbonio`
