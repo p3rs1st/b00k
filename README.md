@@ -2,7 +2,9 @@
 
 ## 本地编译
 
-`cd docs && rm -rf build && make html`
+1. `cd docs`
+2. `pip install -r requirements.txt`
+3. `rm -rf build && make html`
 
 ## Visual Studio Code插件
 
