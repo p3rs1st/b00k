@@ -20,6 +20,12 @@ git rebase
 - squash: 合并commit，将除了第一个commit的pick，其他均改为squash，保存后处理第二个编辑文件，文件修改commit信息
 - 修改commit内容: 将待修改的commit前面的pick改为reword，保存后编辑文件，修改commit信息
 
+golang yaml多行字符串渲染
+`````````````````````````
+
+go中常使用的yaml包 ``gopkg.in/yaml.v3`` 在填入多行字符串时，如果希望在yaml中渲染出多行字符串而不是单行转义字符串，
+则需要保证字符串的每一行尾没有空字符，行首不能有缩进字符
+
 http post multipart/form-data
 `````````````````````````````
 
